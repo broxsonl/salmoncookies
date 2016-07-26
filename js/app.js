@@ -18,7 +18,7 @@ var alki = {
 };
 
 alki.numCustHourly = function() {
-  for ( var i = 0; i < hours.length; i++) {
+  for (var i = 0; i < hours.length; i++) {
     var singleHourCust = Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust;
     this.avgCustArray.push(singleHourCust);
   }
@@ -40,12 +40,11 @@ alki.render = function() {
     listElement.textContent = hours[i] + this.cookiesEachHourArray[i] + ' cookies';
     alkiList.appendChild(listElement);
   }
-  var listElement1 = document.createElement('li');
-  listElement1.textContent = 'Total: ' + this.totalCookies + ' cookies';
-  alkiList.appendChild(listElement1);
+  listElement = document.createElement('li');
+  listElement.textContent = 'Total: ' + this.totalCookies + ' cookies';
+  alkiList.appendChild(listElement);
 };
 
-alki.render();
 
 var seatac = {
   //Properties
@@ -77,16 +76,15 @@ seatac.render = function() {
   var seatacList = document.getElementById('seatacList');
   this.cookiesPerCustomer();
   for(var i = 0; i < this.cookiesEachHourArray.length; i++) {
-    var listElement = document.createElement('li');
-    listElement.textContent = hours[i] + this.cookiesEachHourArray[i] + ' cookies';
-    seatacList.appendChild(listElement);
+    var listElement1 = document.createElement('li');
+    listElement1.textContent = hours[i] + this.cookiesEachHourArray[i] + ' cookies';
+    seatacList.appendChild(listElement1);
   }
-  var listElement1 = document.createElement('li');
+  listElement1 = document.createElement('li');
   listElement1.textContent = 'Total: ' + this.totalCookies + ' cookies';
   seatacList.appendChild(listElement1);
 };
 
-seatac.render();
 
 var seacen = {
   //Properties
@@ -122,12 +120,11 @@ seacen.render = function() {
     listElement2.textContent = hours[i] + this.cookiesEachHourArray[i] + ' cookies';
     seacenList.appendChild(listElement2);
   }
-  var listElement1 = document.createElement('li');
-  listElement1.textContent = 'Total: ' + this.totalCookies + ' cookies';
+  listElement2 = document.createElement('li');
+  listElement2.textContent = 'Total: ' + this.totalCookies + ' cookies';
   seacenList.appendChild(listElement2);
 };
 
-seacen.render();
 
 var caphill = {
   //Properties
@@ -163,12 +160,11 @@ caphill.render = function() {
     listElement3.textContent = hours[i] + this.cookiesEachHourArray[i] + ' cookies';
     capHillList.appendChild(listElement3);
   }
-  var listElement1 = document.createElement('li');
-  listElement1.textContent = 'Total: ' + this.totalCookies + ' cookies';
-  capHillList.appendChild(listElement1);
+  listElement3 = document.createElement('li');
+  listElement3.textContent = 'Total: ' + this.totalCookies + ' cookies';
+  capHillList.appendChild(listElement3);
 };
 
-caphill.render();
 
 var firstandPike = {
   //Properties
@@ -204,9 +200,13 @@ firstandPike.render = function() {
     listElement4.textContent = hours[i] + this.cookiesEachHourArray[i] + ' cookies';
     firstandPikeList.appendChild(listElement4);
   }
-  var listElement1 = document.createElement('li');
-  listElement1.textContent = 'Total: ' + this.totalCookies + ' cookies';
-  firstandPikeList.appendChild(listElement1);
+  listElement4 = document.createElement('li');
+  listElement4.textContent = 'Total: ' + this.totalCookies + ' cookies';
+  firstandPikeList.appendChild(listElement4);
 };
 
+alki.render();
+seatac.render();
+seacen.render();
+caphill.render();
 firstandPike.render();
