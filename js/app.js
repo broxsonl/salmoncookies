@@ -90,9 +90,20 @@ function makeFooterRow() { //eslint-disable-line
   var tableRow = document.createElement('tr');
   tableRow.textContent = 'Totals';
   salmonTable.appendChild(tableRow);
+  for (var i = 0; i < hours.length; i++) {
+    var hourlyTotal = 0;
+    for (var j = 0; j < storeLocations.length; j++) {
+      hourlyTotal = hourlyTotal + storeLocations[j].cookiesEachHourArray[i];
+    }
+    var tdElement = document.createElement('td');
+    tdElement.textContent = hourlyTotal;
+    tableRow.appendChild(tdElement);
+  }
+  tdElement = document.createElement('td');
+  tdElement.textContent = hourlyTotal;
+  tableRow.appendChild(tdElement);
 };
 
 makeHeaderRow();
 renderAllStores();
-console.log(storeLocations)
 makeFooterRow();
