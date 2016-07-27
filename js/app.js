@@ -9,8 +9,12 @@ var salmonTable = document.getElementById('salmonTable');
 
 function makeHeaderRow() { //eslint-disable-line
   var tableRow = document.createElement('tr');
+  var thElement = document.createElement('th');
+  thElement.textContent = null;
+  salmonTable.appendChild(tableRow);
+  tableRow.appendChild(thElement);
   for (var i = 0; i < hours.length; i++) {
-    var thElement = document.createElement('th');
+    thElement = document.createElement('th');
     thElement.textContent = hours[i];
     tableRow.appendChild(thElement);
     // console.log(thElement);
