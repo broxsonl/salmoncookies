@@ -1,11 +1,10 @@
-bigStupidTotal{
-     align-content: center;
+table{
+
 }
 
 table, th, td {
-   border: 1px solid black;
+   border: 1px blue solid;
 }
 
 
-
-grab the first child of the table and give it blank space
+Make fish image bullets on the page!!!
