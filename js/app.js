@@ -90,17 +90,20 @@ function makeFooterRow() { //eslint-disable-line
   var tableRow = document.createElement('tr');
   tableRow.textContent = 'Totals';
   salmonTable.appendChild(tableRow);
+  var bigStupidTotal = 0;
   for (var i = 0; i < hours.length; i++) {
     var hourlyTotal = 0;
     for (var j = 0; j < storeLocations.length; j++) {
       hourlyTotal = hourlyTotal + storeLocations[j].cookiesEachHourArray[i];
+      bigStupidTotal += storeLocations[j].cookiesEachHourArray[i];
+      console.log(bigStupidTotal);
     }
     var tdElement = document.createElement('td');
     tdElement.textContent = hourlyTotal;
     tableRow.appendChild(tdElement);
   }
   tdElement = document.createElement('td');
-  tdElement.textContent = hourlyTotal;
+  tdElement.textContent = bigStupidTotal;
   tableRow.appendChild(tdElement);
 };
 
