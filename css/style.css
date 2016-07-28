@@ -1,10 +1,24 @@
 table{
 
 }
-
-table, th, td {
-   border: 1px blue solid;
+fieldset {
+  width: 60%;
+}
+#salesInput {
+  align-self: center;
 }
 
+table, tr, th, td {
+   border: 1px blue solid;
+   border-radius: 5%;
+}
+
+th {
+  background-color: ;
+}
+
+bigStupidTotal {
+  font-style: bold;
+}
 
 Make fish image bullets on the page!!!
