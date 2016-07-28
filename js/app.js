@@ -1,11 +1,14 @@
 'use strict';
 
 //Global Variables
-var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
+//Global Variable - Store hours
+var hours = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 pm', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm'];
+//Global Variable - Store Locations Array
 var storeLocations = [];
-
+//Get Sales Data Table from sales.html
 var salmonTable = document.getElementById('salmonTable');
+//Get
 var salesInput = document.getElementById('salesInput');
 // var clearTable = document.getElementById('submit');
 
@@ -25,7 +28,8 @@ function Store(name, minCustomers, maxCustomers, avgCookies) {
   this.cookiesPerCustomer();
   //Push the created instance to the storeLocations array
   storeLocations.push(this);
-};
+}
+
 Store.prototype.render = function() {
   var trRowName = document.createElement('tr');
   var tdStore = document.createElement('td');
@@ -54,17 +58,6 @@ Store.prototype.cookiesPerCustomer = function() {
     this.totalCookiesPerDay += singleHourCookies;
   }
 };
-
-//Store Object Declarations
-new Store('Alki', 2, 16, 4.6); //eslint-disable-line
-new Store('SeaTac Airport', 3, 24, 1.2); //eslint-disable-line
-new Store('Seattle Center', 11, 38, 3.7); //eslint-disable-line
-new Store('Capitol Hill', 20, 38, 2.3); //eslint-disable-line
-new Store('1st & Pike', 23, 65, 6.3); //eslint-disable-line
-
-//Store method to calculate input for our arrays.
-
-
 //Table creation functions
 function makeHeaderRow() { //eslint-disable-line
   var tableRow = document.createElement('tr');
@@ -109,6 +102,18 @@ function makeFooterRow() { //eslint-disable-line
   tableRow.appendChild(tdElement);
 }
 
+//Store Object Declarations
+new Store('Alki', 2, 16, 4.6); //eslint-disable-line
+new Store('Seattle Center', 11, 38, 3.7); //eslint-disable-line
+new Store('SeaTac Airport', 3, 24, 1.2); //eslint-disable-line
+new Store('Capitol Hill', 20, 38, 2.3); //eslint-disable-line
+new Store('1st & Pike', 23, 65, 6.3); //eslint-disable-line
+
+
+//Store method to calculate input for our arrays.
+
+
+
 //Event Handler function
 function dataInput(event) {
   event.preventDefault();
@@ -121,7 +126,7 @@ function dataInput(event) {
   var name = event.target.name.value;
   var minCustomers = parseInt(event.target.minCustomers.value);
   var maxCustomers = parseInt(event.target.maxCustomers.value);
-  var avgCookies = parseInt(event.target.avgCookies.value);
+  var avgCookies = parseFloat(event.target.avgCookies.value);
 
   var newStore = new Store(name, minCustomers, maxCustomers, avgCookies);
   // for (var i = 0; i < storeLocations.length; i++) {
@@ -135,26 +140,19 @@ function dataInput(event) {
   //     storeLocations[i].cookiesPerCustomer;
   //   }
   // }
-
-//Clears the rendered table from the page.
-  function clearTable() {
-    salmonTable.innerHTML = '';
-  };
-  clearTable();
-
-
+//Clears the rendered table from the page. Adapted from Britt's code.
+  salmonTable.textContent = null;
 //Code to make the input fields blank after user submits
-  event.target.name.value = null;
-  event.target.minCustomers.value = null;
-  event.target.maxCustomers.value = null;
-  event.target.avgCookies.value = null;
+  event.target.name = null;
+  event.target.minCustomers = null;
+  event.target.maxCustomers = null;
+  event.target.avgCookies = null;
 
 //Re-creating our table with the new user inputs
   makeHeaderRow();
   renderAllStores();
   makeFooterRow();
 }
-
 
 makeHeaderRow();
 renderAllStores();
