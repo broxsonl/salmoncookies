@@ -1,26 +1,80 @@
+/*Overall container element*/
+
 body {
-  max-width: 100%;
-}
-
-table{
+  background-color:
 
 }
-fieldset {
-  width: 60%;
+
+/*Global Controllers*/
+li {
+  font-size: 50px;
+
 }
 
-table, tr, th, td {
-   border: 1px blue solid;
-   border-radius: 5%;
-   align-self: center; 
+/*Header elements*/
+header {
+
 }
 
-th {
-  background-color: ;
+header h1 {
+
 }
 
-bigStupidTotal {
-  font-style: bold;
+#salmonLogo {
+
 }
+
+#topNav {
+
+}
+#topNav ul{
+
+}
+
+/*Body containers*/
+#content {
+
+}
+
+article {
+
+}
+
+.contentPictures {
+
+}
+
+#forSale {
+
+}
+
+#howDone {
+
+}
+
+#about{
+
+}
+
+
+
+/*Top left and top right fixed position info cubes*/
+#topLeft {
+
+}
+
+#topLeft img {
+
+}
+
+#topRight {
+
+}
+
+#topRight img {
+
+}
+/*
 
 Make fish image bullets on the page!!!
+Family picture = "We're a family business"*/

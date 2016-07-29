@@ -123,36 +123,57 @@ function dataInput(event) {
     return alert('Fields cannot be empty!');
   }
 
-  var name = event.target.name.value;
-  var minCustomers = parseInt(event.target.minCustomers.value);
-  var maxCustomers = parseInt(event.target.maxCustomers.value);
-  var avgCookies = parseFloat(event.target.avgCookies.value);
-
-  var newStore = new Store(name, minCustomers, maxCustomers, avgCookies);
-  // for (var i = 0; i < storeLocations.length; i++) {
-  //   if (storeLocations[i].name === event.target.name.value) {
-  //     storeLocations[i].minCustomers = parseInt(event.target.minCustomers.value);
-  //     storeLocations[i].maxCustomers = parseInt(event.target.maxCustomers.value);
-  //     storeLocations[i].avgCookies = parseFloat(event.target.avgCookies.value);
-  //     storeLocations[i].averageCustomersPerHour = [];
-  //     storeLocations[i].averageCookiesPerHour = [];
-  //     storeLocations[i].numOfCustomersPerHour;
-  //     storeLocations[i].cookiesPerCustomer;
-  //   }
-  // }
-//Clears the rendered table from the page. Adapted from Britt's code.
-  salmonTable.textContent = null;
-//Code to make the input fields blank after user submits
   event.target.name = null;
   event.target.minCustomers = null;
   event.target.maxCustomers = null;
   event.target.avgCookies = null;
 
-//Re-creating our table with the new user inputs
+  var name = event.target.name.value;
+  var minCustomers = parseInt(event.target.minCustomers.value);
+  var maxCustomers = parseInt(event.target.maxCustomers.value);
+  var avgCookies = parseFloat(event.target.avgCookies.value);
+
+  salmonTable.textContent = null;
+  //Code to make the input fields blank after user submits
+
+  var storeExist = doesStoreExist(storeLocations, name);
+  var index;
+
+  function doesStoreExist(x,y) {
+    for (var i = 0; i < x.length; i++) {
+      if (x[i].name === y) {
+        index = i;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  doesStoreExist(storeLocations, name);
+  console.log(doesStoreExist(storeLocations, name));
+
+  if (storeExist === true) {
+    console.log('did find name');
+    storeLocations[index].minCustomers = parseInt(minCustomers);
+    storeLocations[index].maxCustomers = parseInt(maxCustomers);
+    storeLocations[index].avgCookies = parseFloat(avgCookies);
+    storeLocations[index].averageCustomersPerHour = [];
+    storeLocations[index].averageCookiesPerHour = [];
+    storeLocations[index].totalCookiesPerDay = 0;
+    storeLocations[index].numOfCustomersPerHour();
+    storeLocations[index].cookiesPerCustomer();
+  }
+
+  if (storeExist === false) {
+    var newStore = new Store(name, minCustomers, maxCustomers, avgCookies);
+  }
+
+  //Re-creating our table with the new user inputs
   makeHeaderRow();
   renderAllStores();
   makeFooterRow();
 }
+
 
 makeHeaderRow();
 renderAllStores();
