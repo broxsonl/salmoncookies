@@ -1,7 +1,31 @@
+
 /*Overall container element*/
 
+* {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
 body {
-  background-color:
+  background-color: blue;
+  height: 100%;
+  flex-direction: column;
+
+}
+
+#leftNav {
+  position: absolute;
+  float: left;
+  background-color: green;
+  height: 100%
+  width: 15%;
+
+}
+
+#rightNav {
+  float: right;
+  background-color: green;
 
 }
 
@@ -13,6 +37,10 @@ li {
 
 /*Header elements*/
 header {
+  background-color: red;
+  position: static;
+  margin-left: 15%;
+  margin-right: 15%;
 
 }
 
@@ -21,45 +49,71 @@ header h1 {
 }
 
 #salmonLogo {
+  positon: relative;
+  top: 50%;
+  left: 50%;
 
 }
 
 #topNav {
 
 }
-#topNav ul{
+
+#topNav ul {
+
+
+}
+
+#topNav li {
+    display: inline;
 
 }
 
 /*Body containers*/
 #content {
+  background-color: green;
+  position: static;
+  margin-left: 15%;
+  margin-right: 15%;
+
 
 }
 
 article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
 }
 
 .contentPictures {
+  border: blue 5px dotted
+  width: 33%;
 
 }
 
 #forSale {
+  border: blue 5px dotted
+  width: 33%;
 
 }
 
 #howDone {
+  border: blue 5px dotted
+  width: 33%;
 
 }
 
-#about{
+#about {
+  border: blue 5px dotted
+  width: 33%;
 
 }
-
-
 
 /*Top left and top right fixed position info cubes*/
 #topLeft {
+  position: fixed;
+  float: left;
 
 }
 
@@ -68,6 +122,8 @@ article {
 }
 
 #topRight {
+  position: fixed;
+  float: left;
 
 }
 
