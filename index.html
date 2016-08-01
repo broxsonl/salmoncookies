@@ -4,58 +4,170 @@
     <title>Pat's Original Salmon Cookies</title>
     <link rel="stylesheet" href="css/indexstyle.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
   </head>
   <body>
+    <div class="top-right-nav">
+      <h2>Hours of Operation</h2>
+      <p>Mon - Fri: 6am - 8pm</p>
+      <p>Sat: 6am - 10pm</p>
+      <p>Sun: CLOSED</p>
+      <p class="phone">Phone:</p>
+      <p>(555)555-5555</p>
+
+    </div>
+    <div class="top-left-nav">
+      <h2>Store Locations:</h2>
+      <ul>
+        <li>1st &amp; Pike</li>
+        <li>Seattle Center</li>
+        <li>Capitol Hill</li>
+        <li>SeaTac Airport</li>
+        <li>Alki</li>
+        <li class="coming-soon">COMING SOON:</li>
+        <li>Bellevue Square</li>
+      </ul>
+
+    </div>
+
+    <div class="wrap">
+      <div class="share-lists-one">
+        <ul class="social-media-list">
+          <li><img src="img/fb-icon.png"></li>
+          <li><img src="img/twit-icon.png"></li>
+          <li><img src="img/gp-icon.png"></li>
+          <li><img src="img/insta-icon.png"></li>
+          <li><img src="img/pint-icon.png"></li>
+        </ul>
+      </div>
     <header>
-      <h1>Pat's Original Salmon Cookies</h1>
-        <!--Figure out how to add subtitle here below h1. "The Pride of Seattle Confection"-->
-      <img id=salmonLogo src="img/salmon.png"></img>
-      <nav id="topNav">
+      <br>
+      <div class="titlefish">
+        <img class="logofish" src="img/fish.jpg">
+        <h1>Pat's Original Salmon Cookies</h1><img class="logofish" src="img/fish.jpg">
+          <!--Figure out how to add subtitle here below h1. "The Pride of Seattle Confection"-->
+      </div>
+      <br>
+      <!--code to curve text found at css-tricks.com -->
+      <div class="established">
+          <h1>
+            <span class="char1">E</span>
+            <span class="char2">s</span>
+            <span class="char3">t</span>
+            <span class="char4">a</span>
+            <span class="char5">b</span>
+            <span class="char6">l</span>
+            <span class="char7">i</span>
+            <span class="char8">s</span>
+            <span class="char9">h</span>
+            <span class="char10">e</span>
+            <span class="char11">d</span>
+            <span class="char12"> </span>
+            <span class="char13">1</span>
+            <span class="char14">9</span>
+            <span class="char15">3</span>
+            <span class="char16">7</span>
+            <span class="char17"> </span>
+            <span class="char18"> </span>
+            <span class="char19"> </span>
+            <span class="char20"> </span>
+            <span class="char21"> </span>
+            <span class="char22"> </span>
+            <span class="char23"> </span>
+            <span class="char24"> </span>
+          </h1>
+        </div>
+        <br>
+      <div class="logo-image">
+        <img class=salmon-logo src="img/salmon.png">
+      </div>
+      <div class="logo-text">
+        <p>The best fish-forward confections in the Northwest!</p>
+      </div>
+      <nav class="top-nav">
         <ul><!--Align these li on the same line together and put bullets only between them-->
           <li>Home</li>
+          <li><img src="img/bulletfish.ico"></li>
+          <li>Locations</li>
+          <li><img src="img/bulletfish.ico"></li>
           <li>About</li>
-          <li>Contact</li>
         </ul>
       </nav>
     </header>
-    <nav id="topLeft">
-      <!--Square in top left same width as the left nav, same height as the header, fixed position to move w/ the page.-->
-      <!--The picture here will have a container border-radius of 100% to make it circular.-->
-    </nav>
-    <nav id="topRight">
-      <!--Square in top left same width as the left nav, same height as the header, fixed position to move w/ the page.-->
-      <!--The picture here will have a container border-radius of 100% to make it circular.-->
-
-    </nav>
-    <div id="content">
-
-    <article>
-      <div class="contentPicture">
+    <div class="content-head">
+      <h1>PRODUCTS FOR SALE</h1>
+    </div>
+    <div class="content-block">
+      <div class="cookie-sale">
+        <span id="cookie-buy-now">BUY NOW!</span>
+        <div class="cookie-sale-pic">
+          <img class="cookie-pic" src="img/frosted-cookie.jpg">
+        </div>
+        <button type="button"> Add to Cart!</button>
+        <p>The original best-seller!</p>
       </div>
-      <div id="forSale">
+      <div class="shirt-sale">
+          <span id="shirt-new">NEW!</span>
+        <div class="shirt-sale-pic">
+          <img class="shirt-pic" src="img/shirt.jpg">
+        </div>
+        <button type="button"> Add to Cart!</button>
+        <p>Make a splash with this fish shirt!</p>
       </div>
-    </article>
-
-    <article>
-      <div class="contentPicture">
+    </div>
+    <div class ="content-head">
+      <h1>WHAT ARE SALMON COOKIES?</h1>
+    </div>
+    <div class="content-block">
+      <div class="faq-picture">
+        <img src="img/cutter.jpeg">
       </div>
-      <div id="howDone">
+        <div class="faq-content">
+          <h2>A Seattle Classic</h2>
+          <ul>
+            <li><img src="img/bulletfish.ico">Our cookies are all made from REAL salmon</li>
+            <br>
+            <li><img src="img/bulletfish.ico">They taste like a cake combined with a fish</li>
+            <br>
+            <li><img src="img/bulletfish.ico">For the full-effect, we cut them into the shape of fish</li>
+            <br>
+            <li><img src="img/bulletfish.ico">Our cookies come in 193 flavors, all with a hint of salmon!</li>
+            <br>
+            <li><img src="img/bulletfish.ico">Best-enjoyed with a cup of coffee or tartar sauce</li>
+          </ul>
+        </div>
+    </div>
+    <div class ="content-head">
+      <h1>ABOUT US</h1>
+    </div>
+    <div class="content-block">
+      <div class="about-content">
+        <h2>Family-owned and Operated</h3>
+        <ul>
+          <li><img src="img/bulletfish.ico">Ray Jefferstein founded Pat's Original Salmon Cookies in 1937 at 1st and Pike</li>
+          <br>
+          <li><img src="img/bulletfish.ico">Pat took over his father's business in 1985, and has opened up four new locations</li>
+          <br>
+          <li><img src="img/bulletfish.ico">Pat lives in Seattle, together with his wife Jane and their two children Pat Jr and Mary-chinook</li>
+          <br>
+          <li><img src="img/bulletfish.ico">Pat and his family hope to share their love of salmon and cookies with you, so come down to one of our locations!</li>
+          <br>
+        </ul>
       </div>
-    </article>
-
-    <article>
-      <div class="contentPicture">
-      </div>
-      <div id="about">
-      </div>
-    </article>
-
-    <article>
-      <!--Embed a salmon-related video and make it in the center-->
-    </article>
-
-  </div>
-    <footer>
-    </footer>
+        <div class="about-picture">
+          <img src="img/family.jpg">
+        </div>
+    </div>
+      <footer>
+        <div class="footer-head">
+          <p>Copyright &copy; 2016 Pat's Salmon Cookies. All rights reserved.</p>
+        </div>
+        <div class="copyright">
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
