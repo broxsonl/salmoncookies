@@ -1,24 +1,36 @@
 body {
-  max-width: 100%;
+  width: 950px;
+  justify-content: center;
+  margin: auto;
+  background-color: lightgrey;
 }
 
-table{
+h1 {
+  font-family: 'Anonymous Pro';
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  font-weight: bold;
+  color: salmon;
+  font-size: 32px;
+}
+
+#salmonTable{
+  border: salmon 15px ridge;
 
 }
 fieldset {
+  border: salmon 15px ridge;
   width: 60%;
+  justify-content: center;
+  margin: auto;
 }
 
 table, tr, th, td {
-   border: 1px blue solid;
+   border: 1px salmon solid;
    border-radius: 5%;
-   margin:
 }
 
 th {
   background-color: ;
 }
-
-Make fish image bullets on the page!!!
-
-Embed some kind of salmon video?
